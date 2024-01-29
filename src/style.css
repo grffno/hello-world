@@ -1,0 +1,306 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Customization */
+:root {
+  font-size: 62.5%;
+}
+
+body,
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  height: 100%;
+  color: #333;
+}
+
+button {
+  font-size: 1.3rem;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+#app {
+  resize: both;
+  overflow: auto;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas: "sidebar main";
+}
+
+#sidebar {
+  grid-area: sidebar;
+  background-color: rgb(230, 230, 230);
+  border-right: 1px solid #ddd;
+  padding: 20px;
+}
+
+#main {
+  grid-area: main;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+#todo-due-date {
+  color: #888;
+}
+
+.project-btn-div {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+.project-btn {
+  background: none;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  padding: 6px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  text-align: left;
+  color: #333;
+}
+
+.project-delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  margin-bottom: 6px;
+  text-align: center;
+  color: #333;
+}
+
+.project-delete-btn:hover {
+  color: red;
+}
+
+.project-btn-clicked {
+  color: #eee;
+  background: rgb(14, 140, 250);
+}
+
+.project-btn:hover {
+  color: #333;
+  background: rgb(208, 208, 208);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #888;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-label > * {
+  margin-right: 8px;
+  margin-bottom: 12px;
+}
+
+.modal-btn {
+  margin-right: 8px;
+}
+
+.new-todo-btn {
+  border-radius: 100px;
+  border: 1px solid #333;
+  background-color: #fefefe;
+  font-size: 18px;
+  color: #333;
+}
+
+.todo-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-form,
+.todo-card {
+  padding: 8px;
+  margin: 8px 0 8px 0;
+}
+
+.todo-details-container > div {
+  padding: 2px;
+}
+
+.todo-delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  color: #333;
+}
+
+.todo-delete-btn:hover {
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  color: #888;
+}
+
+.full {
+  color: #333;
+}
